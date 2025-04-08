@@ -72,9 +72,11 @@ html {
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 120px 0.5in 160px; /* espacio para el encabezado y pie de página */
+    padding: 0.5in; /* Espaciado general */
     background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    margin-top: 160px; /* Se añadió para crear un espacio superior */
+    margin-bottom: 180px; /* Se añadió para crear espacio inferior para el pie de página */
 }
 
 /* header */
@@ -247,7 +249,7 @@ tr:hover .cut {
     body {
         box-shadow: none;
         margin: 0;
-        padding: 120px 0.5in 160px; /* Espacio para el encabezado y pie de página */
+        padding: 120px 0.5in 160px; /* Ajustado para asegurar espacio para pie de página y encabezado */
     }
     span:empty {
         display: none;
@@ -305,5 +307,3 @@ tr:hover .cut {
     max-width: 100%;
     object-fit: contain;
 }
-
-
