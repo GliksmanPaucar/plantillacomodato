@@ -258,10 +258,10 @@ tr:hover .cut {
 }
 
 @page {
-    margin-top: 3in; /* Aumenta este valor */
-    margin-left: 0.5in;
-    margin-right: 0.5in;
-    margin-bottom: 0.5in;
+    margin-top: 0.2in; /* Aumenta este valor */
+    margin-left: 0.2in;
+    margin-right: 0.2in;
+    margin-bottom: 0.2in;
 }
 
 /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
