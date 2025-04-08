@@ -275,3 +275,50 @@ tr:hover .cut {
 .small-text {
     font-size: 60%;
 }
+.header-print,
+.footer-print {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.header-print {
+    top: 0;
+    height: 100px; /* ajusta según el tamaño de tu imagen */
+}
+
+.footer-print {
+    bottom: 0;
+    height: 60px; /* ajusta según el tamaño de tu imagen */
+}
+
+
+
+
+
+.header-print img,
+.footer-print img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Asegura que el contenido principal no se solape con header/footer */
+body {
+    padding-top: 120px;  /* espacio para header */
+    padding-bottom: 80px; /* espacio para footer */
+}
+
+@media print {
+    .header-print,
+    .footer-print {
+        position: fixed;
+    }
+
+    body {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+}
