@@ -1,86 +1,22 @@
-/* Estilos generales */
+/* reset */
 * {
-  box-sizing: content-box;
-  color: inherit;
-  font: inherit;
-  line-height: inherit;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  vertical-align: top;
-}
-
-/* Encabezado y pie de página solo para impresión */
-.header-print,
-.footer-print {
-  display: none;
-}
-
-@media print {
-  html, body {
+    box-sizing: content-box;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    list-style: none;
     margin: 0;
     padding: 0;
-    background: none;
-  }
-
-  body {
-    box-shadow: none;
-    padding-top: 160px;   /* espacio para encabezado */
-    padding-bottom: 180px; /* espacio para pie de página */
-  }
-
-  .header-print,
-  .footer-print {
-    display: block;
-    position: fixed;
-    width: 100%;
-    left: 0;
-    z-index: 999;
-  }
-
-  .header-print {
-    top: 0;
-    height: 140px;
-  }
-
-  .footer-print {
-    bottom: 0;
-    height: 160px;
-  }
-
-  .header-print img,
-  .footer-print img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .add, .cut {
-    display: none !important;
-  }
-
-  span:empty {
-    display: none;
-  }
-}
-
-/* CONTINÚA tu CSS original aquí abajo */
-/* heading */
-h1 {
-  font: bold 100% sans-serif;
-  letter-spacing: 0.5em;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 1em;
+    text-decoration: none;
+    vertical-align: top;
 }
 
 /* content editable */
 *[contenteditable] {
-  border-radius: 0.25em;
-  min-width: 1em;
-  outline: 0;
-  cursor: pointer;
+    border-radius: 0.25em;
+    min-width: 1em;
+    outline: 0;
+    cursor: pointer;
 }
 
 *[contenteditable]:hover,
@@ -88,97 +24,107 @@ h1 {
 td:hover *[contenteditable],
 td:focus *[contenteditable],
 img.hover {
-  background: #DEF;
-  box-shadow: 0 0 1em 0.5em #DEF;
+    background: #DEF;
+    box-shadow: 0 0 1em 0.5em #DEF;
 }
 
 span[contenteditable] {
-  display: inline-block;
+    display: inline-block;
+}
+
+/* heading */
+h1 {
+    font: bold 100% sans-serif;
+    letter-spacing: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em; /* Añadido para espacio después del título */
 }
 
 /* table */
 table {
-  font-size: 75%;
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
+    font-size: 75%;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
 }
 
 th, td {
-  border: 1px solid #000;
-  padding: 0.5em;
-  position: relative;
-  text-align: left;
+    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
+    padding: 0.5em;
+    position: relative;
+    text-align: left;
 }
 
 th {
-  background: #EEE;
+    background: #EEE;
 }
 
 /* page */
 html {
-  font: 16px/1 'Open Sans', sans-serif;
-  overflow: auto;
-  padding: 0.5in;
-  background: #999;
-  cursor: default;
+    font: 16px/1 'Open Sans', sans-serif;
+    overflow: auto;
+    padding: 0.5in;
+    background: #999;
+    cursor: default;
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0.5in;
-  background: #FFF;
-  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-  margin-top: 160px;
-  margin-bottom: 180px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.5in; /* Espaciado general */
+    background: #FFF;
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+    margin-top: 160px; /* Se añadió para crear un espacio superior */
+    margin-bottom: 180px; /* Se añadió para crear espacio inferior para el pie de página */
 }
 
 /* header */
 header {
-  margin: 0 0 3em;
-  overflow: hidden;
+    margin: 0 0 3em;
+    overflow: hidden; /* Añadido para manejar el colapso del margen superior */
 }
 
 header h1 {
-  background: #27649d;
-  border-radius: 0.25em;
-  color: #FFF;
-  margin: 0;
-  padding: 0.5em 0;
+    background: #27649d;
+    border-radius: 0.25em;
+    color: #FFF;
+    margin: 0;
+    padding: 0.5em 0;
 }
 
 header address {
-  float: left;
-  font-size: 75%;
-  font-style: normal;
-  line-height: 1.25;
-  margin: 0 1em 1em 0;
+    float: left;
+    font-size: 75%;
+    font-style: normal;
+    line-height: 1.25;
+    margin: 0 1em 1em 0;
 }
 
 header span,
 header img {
-  display: block;
-  float: right;
-  margin: 0 0 1em 1em;
-  max-height: 25%;
-  max-width: 60%;
-  position: relative;
+    display: block;
+    float: right;
+    margin: 0 0 1em 1em;
+    max-height: 25%;
+    max-width: 60%;
+    position: relative;
 }
 
 header img {
-  max-height: 100%;
-  max-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 header input {
-  cursor: pointer;
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+    cursor: pointer;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 /* article */
@@ -186,128 +132,149 @@ article,
 article address,
 table.meta,
 table.inventory {
-  margin: 0 0 3em;
-  clear: both;
+    margin: 0 0 3em;
+    clear: both;
 }
 
 article:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 article h1 {
-  clip: rect(0 0 0 0);
-  position: absolute;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
 
 article address {
-  float: left;
-  font-size: 125%;
-  font-weight: bold;
+    float: left;
+    font-size: 125%;
+    font-weight: bold;
 }
 
 /* table meta & balance */
 table.meta,
 table.balance {
-  float: right;
-  width: 36%;
+    float: right;
+    width: 36%;
 }
 
 table.meta:after,
 table.balance:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
+/* table meta */
 table.meta th {
-  width: 40%;
+    width: 40%;
 }
 
 table.meta td {
-  width: 60%;
+    width: 60%;
 }
 
+/* table items */
 table.inventory th {
-  font-weight: bold;
-  text-align: center;
+    font-weight: bold;
+    text-align: center;
 }
 
 table.inventory td {
-  text-align: right;
+    text-align: right;
 }
 
-th, td {
-  border-width: 1px;
-  padding: 0.5em;
-  position: relative;
-  text-align: left;
-  border-radius: 0.25em;
-  border-style: solid;
-}
+table { font-size: 75%; table-layout: fixed; width: 100%; }
+table { border-collapse: separate; border-spacing: 2px; }
+th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
+th, td { border-radius: 0.25em; border-style: solid; }
+th { background: #EEE; border-color: #BBB; }
+td { border-color: #DDD; }
 
-th {
-  background: #EEE;
-  border-color: #BBB;
-}
-
-td {
-  border-color: #DDD;
-}
-
+/* aside */
 aside h1 {
-  border: none;
-  border-width: 0 0 1px;
-  margin: 0 0 1em;
-  border-color: #999;
-  border-bottom-style: solid;
+    border: none;
+    border-width: 0 0 1px;
+    margin: 0 0 1em;
+    border-color: #999;
+    border-bottom-style: solid;
 }
 
+/* javascript */
 .add,
 .cut {
-  display: block;
-  float: left;
-  width: 0.6em;
-  font-size: .8rem;
-  padding: 0.25em 0.5em;
-  background: #9AF;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
-  border-radius: 0.5em;
-  border-color: #0076A3;
-  color: #FFF;
-  cursor: pointer;
-  font-weight: bold;
-  text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
-  margin: -2.5em 0 0;
+    display: block;
+    float: left;
+    width: 0.6em;
+    font-size: .8rem;
+    padding: 0.25em 0.5em;
+    background: #9AF;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
+    background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
+    border-radius: 0.5em;
+    border-color: #0076A3;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
+    margin: -2.5em 0 0;
 }
 
 .add:hover {
-  background: #00ADEE;
+    background: #00ADEE;
 }
 
 .cut {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: -1.5em;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: -1.5em;
 }
 
 tr:hover .cut {
-  opacity: 1;
+    opacity: 1;
+}
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact;
+    }
+    html {
+        background: none;
+        padding: 0;
+    }
+    body {
+        box-shadow: none;
+        margin: 0;
+        padding: 120px 0.5in 160px; /* Ajustado para asegurar espacio para pie de página y encabezado */
+    }
+    span:empty {
+        display: none;
+    }
+    .add,
+    .cut {
+        display: none;
+    }
 }
 
 @page {
-  margin: 0.5in;
+    margin-top: 0.5in; /* Aumenta este valor */
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-bottom: 0.5in;
 }
 
+/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
 .custom-line {
-  border: none;
-  border-bottom: 1px solid #000;
-  margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin: 5px 0;
 }
 
+/* Estilo para el texto más pequeño */
 .small-text {
-  font-size: 60%;
+    font-size: 60%;
 }
