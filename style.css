@@ -278,3 +278,14 @@ tr:hover .cut {
 .small-text {
     font-size: 60%;
 }
+
+
+
+
+
+.header-print img,
+.footer-print img {
+    max-width: 100%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+    height: auto;    /* Mantiene la proporción de la imagen */
+    width: 100%;     /* Hace que la imagen ocupe todo el ancho del contenedor */
+}
