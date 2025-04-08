@@ -186,12 +186,31 @@ table.inventory td {
     text-align: right;
 }
 
-table { font-size: 75%; table-layout: fixed; width: 100%; }
-table { border-collapse: separate; border-spacing: 2px; }
-th, td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
-th, td { border-radius: 0.25em; border-style: solid; }
-th { background: #EEE; border-color: #BBB; }
-td { border-color: #DDD; }
+table {
+    font-size: 75%;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+th, td {
+    border-width: 1px;
+    padding: 0.5em;
+    position: relative;
+    text-align: left;
+    border-radius: 0.25em;
+    border-style: solid;
+}
+
+th {
+    background: #EEE;
+    border-color: #BBB;
+}
+
+td {
+    border-color: #DDD;
+}
 
 /* aside */
 aside h1 {
@@ -238,7 +257,7 @@ tr:hover .cut {
     opacity: 1;
 }
 
-/* impresión */
+/* impresión con encabezado y pie de página */
 @media print {
     * {
         -webkit-print-color-adjust: exact;
@@ -252,7 +271,10 @@ tr:hover .cut {
     body {
         box-shadow: none;
         margin: 0;
-        padding: 120px 0.5in 160px;
+        padding-top: 130px;   /* altura del header + margen extra */
+        padding-bottom: 160px; /* altura del footer + margen extra */
+        padding-left: 0.5in;
+        padding-right: 0.5in;
     }
 
     span:empty {
@@ -289,6 +311,7 @@ tr:hover .cut {
     }
 }
 
+/* márgenes de página para impresión */
 @page {
     margin-top: 0.5in;
     margin-left: 0.5in;
