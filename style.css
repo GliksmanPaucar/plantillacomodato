@@ -311,8 +311,8 @@ tr:hover .cut {
 
 /* Asegura que el contenido principal no se solape con header/footer */
 body {
-    padding-top: 140px;  /* espacio para header */
-    padding-bottom: 160px; /* espacio para footer */
+    padding-top: 0;  /* espacio para header */
+    padding-bottom:0; /* espacio para footer */
 }
 
 @media print {
@@ -322,7 +322,7 @@ body {
     }
 
     body {
-        padding-top: 140px;
-        padding-bottom: 160px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
