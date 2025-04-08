@@ -322,7 +322,7 @@ body {
     }
 
     body {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top:100px;
+        padding-bottom: 140px;
     }
 }
