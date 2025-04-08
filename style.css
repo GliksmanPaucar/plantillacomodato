@@ -258,7 +258,7 @@ tr:hover .cut {
 }
 
 @page {
-    margin-top: 0.5in; /* Aumenta este valor */
+    margin-top: 1.5in; /* Aumenta este valor */
     margin-left: 0.5in;
     margin-right: 0.5in;
     margin-bottom: 0.5in;
