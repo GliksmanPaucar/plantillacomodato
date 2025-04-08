@@ -72,11 +72,9 @@ html {
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0.5in; /* Espaciado general */
+    padding: 0.5in;
     background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-    margin-top: 160px; /* Se añadió para crear un espacio superior */
-    margin-bottom: 180px; /* Se añadió para crear espacio inferior para el pie de página */
 }
 
 /* header */
@@ -104,15 +102,14 @@ header address {
 header span,
 header img {
     display: block;
-
-    margin: 0 auto 1em;
+    float: right;
+    margin: 0 0 1em 1em;
     max-height: 25%;
     max-width: 60%;
     position: relative;
 }
 
 header img {
-
     max-height: 100%;
     max-width: 100%;
 }
@@ -250,7 +247,6 @@ tr:hover .cut {
     body {
         box-shadow: none;
         margin: 0;
-        padding: 120px 0.5in 160px; /* Ajustado para asegurar espacio para pie de página y encabezado */
     }
     span:empty {
         display: none;
@@ -262,10 +258,7 @@ tr:hover .cut {
 }
 
 @page {
-    margin-top: 0.2in; /* Aumenta este valor */
-    margin-left: 0.1in;
-    margin-right: 0.1in;
-    margin-bottom: 0.1in;
+    margin: 0;
 }
 
 /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
@@ -279,5 +272,4 @@ tr:hover .cut {
 .small-text {
     font-size: 60%;
 }
-
 
