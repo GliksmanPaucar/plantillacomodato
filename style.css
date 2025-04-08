@@ -38,7 +38,7 @@ h1 {
     letter-spacing: 0.5em;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1em; /* Añadido para espacio después del título */
+    margin-bottom: 1em;
 }
 
 /* table */
@@ -46,11 +46,11 @@ table {
     font-size: 75%;
     table-layout: fixed;
     width: 100%;
-    border-collapse: collapse; /* Añadido para evitar problemas de bordes en algunas situaciones */
+    border-collapse: collapse;
 }
 
 th, td {
-    border: 1px solid #000; /* Añadido un borde sólido para todas las celdas */
+    border: 1px solid #000;
     padding: 0.5em;
     position: relative;
     text-align: left;
@@ -72,17 +72,23 @@ html {
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0.5in; /* Espaciado general */
+    padding: 160px 0.5in 180px; /* espacio suficiente para header y footer fijos */
     background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-    margin-top: 160px; /* Se añadió para crear un espacio superior */
-    margin-bottom: 180px; /* Se añadió para crear espacio inferior para el pie de página */
+    position: relative;
 }
 
 /* header */
 header {
-    margin: 0 0 3em;
-    overflow: hidden; /* Añadido para manejar el colapso del margen superior */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #FFF;
+    z-index: 10;
+    padding: 1em 0.5in;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -125,6 +131,21 @@ header input {
     position: absolute;
     top: 0;
     width: 100%;
+}
+
+/* footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: #FFF;
+    z-index: 10;
+    padding: 1em 0.5in;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    font-size: 75%;
+    text-align: center;
 }
 
 /* article */
@@ -242,18 +263,37 @@ tr:hover .cut {
     * {
         -webkit-print-color-adjust: exact;
     }
+
     html {
         background: none;
         padding: 0;
     }
+
     body {
         box-shadow: none;
         margin: 0;
-        padding: 120px 0.5in 160px; /* Ajustado para asegurar espacio para pie de página y encabezado */
+        padding-top: 140px;
+        padding-bottom: 160px;
     }
+
+    header, footer {
+        position: fixed;
+    }
+
+    header {
+        top: 0;
+        height: 120px;
+    }
+
+    footer {
+        bottom: 0;
+        height: 150px;
+    }
+
     span:empty {
         display: none;
     }
+
     .add,
     .cut {
         display: none;
@@ -261,48 +301,20 @@ tr:hover .cut {
 }
 
 @page {
-    margin-top: 0.5in; /* Aumenta este valor */
+    margin-top: 0.5in;
     margin-left: 0.5in;
     margin-right: 0.5in;
     margin-bottom: 0.5in;
 }
 
-/* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
+/* Línea debajo de dirección */
 .custom-line {
     border: none;
     border-bottom: 1px solid #000;
     margin: 5px 0;
 }
 
-/* Estilo para el texto más pequeño */
+/* Texto más pequeño */
 .small-text {
     font-size: 60%;
-}
-
-/* ENCABEZADO Y PIE DE PAGINA */
-.header-print,
-.footer-print {
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 100;
-    pointer-events: none;
-}
-
-.header-print {
-    top: 0;
-    height: 100px;
-}
-
-.footer-print {
-    bottom: 0;
-    height: 140px;
-}
-
-.header-print img,
-.footer-print img {
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;
 }
