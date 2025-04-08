@@ -72,7 +72,7 @@ html {
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0.5in;
+    padding: 120px 0.5in 160px; /* espacio para el encabezado y pie de página */
     background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
 }
@@ -247,6 +247,7 @@ tr:hover .cut {
     body {
         box-shadow: none;
         margin: 0;
+        padding: 120px 0.5in 160px; /* Espacio para el encabezado y pie de página */
     }
     span:empty {
         display: none;
@@ -276,40 +277,33 @@ tr:hover .cut {
     font-size: 60%;
 }
 
-
-
 /* ENCABEZADO Y PIE DE PAGINA */
-body {
-  margin: 0;
-  padding-top: 100px;   /* espacio para encabezado */
-  padding-bottom: 140px; /* espacio para pie de página */
-}
-
 .header-print,
 .footer-print {
-  position: fixed;
-  left: 0;
-  right: 0;
-  text-align: center;
-  background: white;
-  z-index: 1000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: white;
+    text-align: center;
+    z-index: 100;
+    pointer-events: none;
 }
 
 .header-print {
-  top: 0;
-  height: 100px;
+    top: 0;
+    height: 100px;
 }
 
 .footer-print {
-  bottom: 0;
-  height: 140px;
+    bottom: 0;
+    height: 140px;
 }
 
 .header-print img,
 .footer-print img {
-  height: 100%;
-  max-width: 100%;
-  object-fit: contain;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 
