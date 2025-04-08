@@ -72,23 +72,17 @@ html {
 body {
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 160px 0.5in 180px; /* espacio suficiente para header y footer fijos */
+    padding: 0.5in;
     background: #FFF;
     box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
-    position: relative;
+    margin-top: 160px;
+    margin-bottom: 180px;
 }
 
 /* header */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: #FFF;
-    z-index: 10;
-    padding: 1em 0.5in;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 0 3em;
+    overflow: hidden;
 }
 
 header h1 {
@@ -131,21 +125,6 @@ header input {
     position: absolute;
     top: 0;
     width: 100%;
-}
-
-/* footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-    background: #FFF;
-    z-index: 10;
-    padding: 1em 0.5in;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-    font-size: 75%;
-    text-align: center;
 }
 
 /* article */
@@ -259,6 +238,7 @@ tr:hover .cut {
     opacity: 1;
 }
 
+/* impresión */
 @media print {
     * {
         -webkit-print-color-adjust: exact;
@@ -272,22 +252,7 @@ tr:hover .cut {
     body {
         box-shadow: none;
         margin: 0;
-        padding-top: 140px;
-        padding-bottom: 160px;
-    }
-
-    header, footer {
-        position: fixed;
-    }
-
-    header {
-        top: 0;
-        height: 120px;
-    }
-
-    footer {
-        bottom: 0;
-        height: 150px;
+        padding: 120px 0.5in 160px;
     }
 
     span:empty {
@@ -298,6 +263,30 @@ tr:hover .cut {
     .cut {
         display: none;
     }
+
+    .header-print, .footer-print {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header-print {
+        top: 0;
+        height: 120px;
+    }
+
+    .footer-print {
+        bottom: 0;
+        height: 150px;
+    }
+
+    .header-print img,
+    .footer-print img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 @page {
@@ -307,14 +296,14 @@ tr:hover .cut {
     margin-bottom: 0.5in;
 }
 
-/* Línea debajo de dirección */
+/* línea decorativa */
 .custom-line {
     border: none;
     border-bottom: 1px solid #000;
     margin: 5px 0;
 }
 
-/* Texto más pequeño */
+/* texto pequeño */
 .small-text {
     font-size: 60%;
 }
