@@ -104,10 +104,10 @@ header address {
     font-size: 75%;
     font-style: normal;
     line-height: 1.25;
-    margin: 0 auto 1em auto; /* Centra el bloque horizontalmente */
+    margin: 1em auto 1em auto; /* Centra el bloque horizontalmente */
     text-align: justify; /* Justifica el texto */
     display: block; /* Asegura que se comporte como un bloque */
-    max-width: 80%; /* Opcional: limita el ancho para que no sea muy largo */
+    max-width: 90%; /* Opcional: limita el ancho para que no sea muy largo */
 }
 
 
