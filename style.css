@@ -101,10 +101,10 @@ header address {
 
 header address {
     float: none; /* Quitamos el float para que se centre */
-    font-size: 90%;
+    font-size: 95%;
     font-style: normal;
-    line-height: 1.25;
-    margin: 1em auto 1em auto; /* Centra el bloque horizontalmente */
+    line-height: 1.5;
+    margin: 3em auto 3em auto; /* Centra el bloque horizontalmente */
     text-align: justify; /* Justifica el texto */
     display: block; /* Asegura que se comporte como un bloque */
     max-width: 90%; /* Opcional: limita el ancho para que no sea muy largo */
