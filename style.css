@@ -90,14 +90,27 @@ header h1 {
     margin: 0;
     padding: 0.5em 0;
 }
-
+/*
 header address {
     float: left;
     font-size: 75%;
     font-style: normal;
     line-height: 1.25;
     margin: 0 1em 1em 0;
+}*/
+
+header address {
+    float: none; /* Quitamos el float para que se centre */
+    font-size: 75%;
+    font-style: normal;
+    line-height: 1.25;
+    margin: 0 auto 1em auto; /* Centra el bloque horizontalmente */
+    text-align: justify; /* Justifica el texto */
+    display: block; /* Asegura que se comporte como un bloque */
+    max-width: 80%; /* Opcional: limita el ancho para que no sea muy largo */
 }
+
+
 
 header span,
 header img {
