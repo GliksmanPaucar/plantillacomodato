@@ -101,7 +101,6 @@ header address {
 
 header address {
     float: none; /* Quitamos el float para que se centre */
-    color: black;
     font-size: 95%;
     font-style: normal;
     line-height: 1.5;
