@@ -286,3 +286,6 @@ tr:hover .cut {
     font-size: 60%;
 }
 
+b, strong {
+    font-weight: bold;
+}
