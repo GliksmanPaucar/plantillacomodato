@@ -172,7 +172,7 @@ table.balance {
 }
 
 table.meta {
-    float: center;
+    margin: 0 auto;
     width: 36%;
 }
 
