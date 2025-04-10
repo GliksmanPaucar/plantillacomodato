@@ -265,7 +265,7 @@ tr:hover .cut {
     }
     body {
         box-shadow: none;
-        margin: 0;
+        margin: auto;
     }
     span:empty {
         display: none;
@@ -277,7 +277,7 @@ tr:hover .cut {
 }
 
 @page {
-    margin: 0;
+    margin: 20mm 10mm;
 }
 
 /* Agrega un estilo personalizado para la línea debajo de la dirección y el número */
