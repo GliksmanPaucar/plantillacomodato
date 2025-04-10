@@ -165,11 +165,17 @@ article address {
 }
 
 /* table meta & balance */
-table.meta,
+
 table.balance {
     float: right;
     width: 36%;
 }
+
+table.meta {
+    float: center;
+    width: 36%;
+}
+
 
 table.meta:after,
 table.balance:after {
