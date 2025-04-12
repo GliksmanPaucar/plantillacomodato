@@ -166,6 +166,12 @@ article address {
 
 /* table meta & balance */
 
+table.descrip {
+    float: left;
+    width: 36%;
+}
+
+
 table.balance {
     float: right;
     width: 36%;
@@ -176,7 +182,7 @@ table.meta {
     width: 36%;
 }
 
-
+table.descrip:after,
 table.meta:after,
 table.balance:after {
     content: "";
@@ -190,6 +196,14 @@ table.meta th {
 }
 
 table.meta td {
+    width: 60%;
+}
+
+table.descrip th {
+    width: 40%;
+}
+
+table.descrip td {
     width: 60%;
 }
 
