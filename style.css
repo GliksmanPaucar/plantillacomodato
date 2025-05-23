@@ -310,3 +310,29 @@ b, strong {
     font-weight: bold;
 }
 
+
+
+
+.row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+
+.left-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25em;
+}
